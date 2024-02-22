@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Portfolio</title>
+    <link rel="stylesheet" href="portfolio.CSS">
+    <script src="https://kit.fontawesome.com/79bf64b12c.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div id= "header">
+        <div class="container">
+            <nav>
+                <ul>
+                    <li><a href="#header"> HOME</a> </li>
+                    <li><a href="#ABOUT"> ABOUT</a> </li>
+                    <li><a href="#portfolio"> PORTFOLIO</a> </li>
+                    <li><a href="#contact"> CONTACT</a> </li>
+                </ul>
+            </nav>
+            <div class= "header-text">
+                <h1>Heyy... I'm <span>Sujoy Mandal</span></h1>
+                <p>  a Front-end Developer.</p> 
+            </div>
+
+        </div>
+    </div>
+
+    <div id="ABOUT">
+        <div class="container">
+            <div class="row">
+                <div class="about-col-1">
+                    <img src="port/Work 2.png.png">
+                </div>
+                
+                <div class="about-col-2">
+                    <h1 class="subtitle">About Me</h1>
+                    <p>I have done my B.Tech in E.C.E in 2022 from Narula,Kolkata.</p>
+
+                    <div class="tab-titles">
+                        <p class="tab-links active-link" onclick="opentab('Skills')">Skills</p>
+                        <p class="tab-links" onclick="opentab('Experience')">Experience</p>
+                        <p class="tab-links" onclick="opentab('Education')">Education</p>
+
+                    </div>
+                    <div class="tab-contents active-tab" id="Skills">
+                      <ul>
+                        <li><span>HTML/CSS</span></li>
+                        <li><span>JAVASCRIPT</span></li>
+                        <li><span>REACT JS.</span></li>
+                      </ul>
+                    </div>
+                
+                 <div class="tab-contents" id="Experience">
+                    <ul>
+                        <li><span>Front-end Developer</span></li>
+                    </ul>
+                 </div>
+
+                
+                 <div class="tab-contents" id="Education">
+                    <ul>
+                        <li><span>2019-2022</span> B.tech at Narula,Kolkata.</li>
+                        <li><span>2016-2019</span> Diploma at Camellia Institute of polytechnic.</li>
+                        <li><span>2014-2016</span> Schooling.</li>
+                    </ul>
+                 </div>
+                </div>
+        
+            </div>
+
+        </div>
+
+    </div>
+
+    <!--------------------services------------------->
+
+    <div class="services">
+        <div class="container">
+            <h1 class="subtitle">My Services</h1>
+            <div class="services-list">
+                <div>
+                    <i class="fa-solid fa-code fa-beat" style="color: #FFD43B;"></i>
+                    <h2>Web Design</h2>
+                    <p> Hiiii</p>
+                    <a href="#">Learn more</a>
+                </div>
+                <div>
+                    <h2>UI/UX Design</h2>
+                    <p> Hiiii</p>
+                    <a href="#">Learn more</a>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+    <!--------portfolio-------- -->
+<div id="portfolio">
+    <div class="container">
+        <h1 class="subtitle">My Work</h1>
+        <div class="Work-List">
+            <div class="Work">
+                <img src="port/work-2.png">
+            </div>
+            <div class="Work">
+                <img src="port/work-1.png">
+            </div>
+            <div class="Work">
+                <img src="port/work-3.png">
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<!-------------Contact---------------------->
+
+<div id="contact">
+    <div class="container">
+        <div class="row">
+            <div class="contact-left">
+                <h1 class="sub-title">Contact With Me</h1>
+                <p><i class="fa-solid fa-envelope"></i> sujoykumar556@gmail.com</p>
+                <p><i class="fa-solid fa-phone-volume"></i>  7003559814</p>
+                
+                <div class="social-icon">
+                    <a href="www.linkedin.com/in/sujoy-kr-mandal-855741192"><i class="fa-brands fa-linkedin fa-lg"></i></a>
+                    <a href><i class="fab fa-twitter-square"></i></a>
+                    <a href><i class="fab fa-instagram"></i></a>
+              </div>
+              <a href="port/mycv.pdf" class="button button2">Download my CV</a>
+            </div>
+            <div class="contact-right">
+                <form>
+                    <input type="text" name="Name" placeholder="Your Name" required>
+                    <input type="Email" name="Email" placeholder="Your Email" required>
+                    <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
+                    <button type="submit" class="button button2">submit</button>
+
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+    <script>
+        var tablinks = document.getElementsByClassName("tab-links");
+        var tabcontents = document.getElementsByClassName("tab-contents");
+
+        function opentab(tabname){
+            for(tablink of tablinks){
+                tablink.classlist.remove("active-link");
+            }
+            for(tabcontent of tabcontents){
+                tabcontents.classlist.remove("active-tab");
+            }
+            event.currentTarget.classlist.add("active-link");
+            document.getElementById(tabname).classlist.add("active-tab");
+        }
+    </script>
+
+    
+</body>
+
+</html>
